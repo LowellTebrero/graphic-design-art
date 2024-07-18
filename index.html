@@ -157,7 +157,7 @@
                         <div class="hidden md:block">
                             <div class="secondary-bg-color h-[20svh] pl-[2rem] pt-[2svh] flex gap-x-[3rem] sm:gap-x-[5rem] lg:gap-x-[10rem] xl:gap-x-[20rem] text-neutral-400">
                                 <span>
-                                    <h1 class="font-bold">Details</h1>
+                                    <h1 class="font-bold text-sm lg:text-lg">Details</h1>
                                     <h3 class="text-xs tracking-wide text-neutral-500">Collection 1</h3>
                                     <h4 class="text-xs tracking-wide">T-shirt Design</h4>
                                     <h5 class="text-xs font-extralight">Tool: Photoshop</h5>
@@ -248,13 +248,16 @@
                                 </div>
 
                                 <div class="md:w-1/2 w-full md:pt-[7svh] p-4 md:pl-0 gap-y-2 text-center md:text-left">
-                                    <h1 class="righteous-regular text-lg md:text-2xl pb-[2svh] flex gap-x-2 tracking-wide text-center md:text-left">Hi, My name is Lowell <span
-                                        ><img
-                                          src="img/waving.png"
-                                          width="30"
-                                          class="waving"
-                                          alt="waving"
-                                      /></span></h1>
+                                    <h1 class="righteous-regular text-lg md:text-2xl pb-[2svh] flex gap-x-2 tracking-wide justify-center md:justify-start">Hi, My name is Lowell 
+                                        <span>
+                                        <img
+                                        src="img/waving.png"
+                                        width="30"
+                                        class="waving"
+                                        alt="waving"/>
+                                        </span>
+                                    </h1>
+
                                     <p class="font-extralight text-xs sm:text-sm tracking-wide pb-4">
                                         A web designer and graphic artist, I can create design using my skills, dedication, and perseverance, applying my knowledge in 2 years experience. 
                                         I am willing to adapt other people's thoughts in order to grow my passion and career so that I can share my knowledge to connect with. 
@@ -281,7 +284,7 @@
                         <div class="hidden md:block">
                             <div class="secondary-bg-color h-[20svh] pl-[2rem] pt-[2svh] flex gap-x-[3rem] sm:gap-x-[5rem] lg:gap-x-[10rem] xl:gap-x-[20rem] text-neutral-400">
                                 <span>
-                                    <h1 class="font-bold">Profile Information</h1>
+                                    <h1 class="font-bold text-sm lg:text-base">Profile Information</h1>
                                     <h3 class="text-xs tracking-wide text-neutral-500">Full Name:</h3>
                                     <h4 class="text-xs tracking-wide ">Lowell S. Tebrero</h4>
                                     <h5 class="text-xs font-extralight">25 Years of existing</h5>
@@ -302,48 +305,90 @@
                 </div>
                 <!-- Item 4 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <div class="w-auto" id="contact">
+                    <div class="w-auto h-[70svh]" id="contact">
                     
-                        <div class="flex">
-                            <div class="w-[20%] pl-5">
-                                <h1>Work Collections</h1>
+                        <div class="h-full flex-col md:flex-row flex">                      
+                            <div class="w-full flex justify-center ">
+                                <form class="flex flex-col gap-y-5 text w-[90%] mx-auto p-5 lg:p-10"
+                                onsubmit="return onSubmit(event);"
+                              >
+                                <div class="flex flex-col gap-y-2">
+                                  <label for="name" class="text-xs lg:text-sm">Your name</label>
+                                  <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="Enter your name"
+                                    class="text-xs lg:text-sm p-2 lg:p-4 rounded-lg text-gray-700 bg-transparent border border-slate-400"
+                                    required
+                                  />
+                                </div>
+                                <div class="flex flex-col gap-y-2">
+                                  <label class="text-xs lg:text-sm">Your contact email or number</label>
+                                  <input
+                                    class="text-xs lg:text-sm p-2 lg:p-4 rounded-lg text-gray-700 bg-transparent border border-slate-400"
+                                    type="tel"
+                                    name="phone"
+                                    placeholder="Enter your email or number"
+                                    required
+                                  />
+                                </div>
+                                <div class="flex flex-col gap-y-2">
+                                  <label for="message" class="text-xs lg:text-sm">Write your message here</label>
+                                  <textarea
+                                    name="message"
+                                    id=""
+                                    placeholder="Enter your message"
+                                    class="text-xs lg:text-sm p-2 lg:p-4 rounded-lg h-[15vh] lg:h-[30vh] text-gray-700 bg-transparent border border-slate-400"
+                                    required
+                                  ></textarea>
+                                </div>
+                  
+                                <div>
+                                  <button
+                                    type="submit"
+                                    class="bg-neutral-600 text-white p-2 rounded-lg px-4 text-xs lg:text-sm"
+                                  >
+                                    Submit now
+                                  </button>
+                                </div>
+                              </form>
                             </div>
-                            <div class="w-full flex justify-center">
-                                <img src="/img/statue-1.png" alt="" width="450">
-                            </div>
-                            <div class="w-[45%] flex flex-col justify-center">
-                            <h1 class="righteous-regular text-2xl pb-[4svh]">Contact</h1>
-                            <p class="font-extralight text-sm tracking-wide">
-                                a three-dimensional representation usually of a person, animal,
-                                or mythical being that is produced by sculpturing, modeling, or
-                                casting.a three-dimensional representation of a person, animal, or
-                                mythical being that is
-                            </p>
-                            <p class="font-extralight text-sm tracking-wide">
-                                a three-dimensional representation usually of a person, animal,
-                                or mythical being that is produced by sculpturing, modeling, or
-                                casting.a three-dimensional representation of a person, animal, or
-                                mythical being that is
-                            </p>
-                            
+                            <div class="w-full lg:w-[45%] flex flex-col gap-y-3 pt-[5svh] items-center lg:items-start">
+                                <h1 class="righteous-regular text-2xl pb-[5svh]">Let's Collab?</h1>
+                                <div class="gap-y-2">                              
+                                    <div class="flex gap-x-3">
+                                            <img src="img/mail.png" width="30" alt="" />
+                                        <h3>lowelltebrero@gmail.com</h3>
+                                    </div>
+                                    <div class="flex gap-x-3">
+                                        <img src="img/call.png" width="30" alt="" />
+                                        <h3>+63 915 577 3784</h3>
+                                    </div>
+                                    <div class="flex gap-x-3">
+                                        <a class="flex space-x-3" href="https://www.facebook.com/lowell.tebrero1/" target="_blank">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"/></svg>
+                                        <span>Facebook</span>
+                                    </a>
+                                    </div>                      
+                                </div>                         
                             </div>
                         </div>
-                        <div class="secondary-bg-color h-[20svh] pl-[2rem] pt-[2svh] flex gap-x-[20rem]  text-neutral-400">
+                        <div class="hidden lg:block secondary-bg-color h-[20svh] pl-[2rem] pt-[2svh] flex gap-x-[20rem]  text-neutral-400">
                             <span>
-                                <h1 class="font-bold">Events</h1>
-                                <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
-                                <h4 class="text-xs tracking-wide ">San Diego</h4>
-                                <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
+                                <h1 class="font-bold">All Right Reserved &copy;</h1>
+                                <h3 class="text-xs tracking-wide text-neutral-500">L-ART</h3>
+                                <h4 class="text-xs tracking-wide">2024</h4>
+                                <!-- <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5> -->
                             </span>
                             <span class="pt-7">
-                                <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
-                                <h4 class="text-xs tracking-wide">San Diego</h4>
-                                <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
+                                <h3 class="text-xs tracking-wide text-neutral-500">Check my Portfolio</h3>
+                                <h4 class="text-xs tracking-wide"><a href="https://lowelltebrero.github.io/" target="_blank">Click here!</a></h4>
+                                <!-- <h5 class="text-xs font-extralight"><a href="https://lowelltebrero.github.io/" target="_blank"> DEV LOWELL</a></h5> -->
                             </span>
                             <span class="pt-7">      
-                                <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
-                                <h4 class="text-xs tracking-wide">San Diego</h4>
-                                <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
+                                <h3 class="text-xs tracking-wide text-neutral-500">Github</h3>
+                                <h4 class="text-xs tracking-wide">https://github.com/LowellTebrero</h4>
+                                <h5 class="text-xs font-extralight"></h5>
                             </span>
                         </div>
                     </div>
