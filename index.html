@@ -13,300 +13,316 @@
       <h1 class="text-center text-lg xl:text-4xl tracking-wide righteous-regular">ART</h1>
     </aside>
     <main class="w-full overflow-hidden" id="indicators-carousel" data-carousel="static">
-      <header class="h-[10svh]  lg:pr-[5rem] xl:pr-[7rem]  2xl:pr-[13rem]  flex items-center justify-center lg:justify-end">
-        <nav class="flex justify-between items-center">
-            <div class="block lg:hidden w-[10rem] pr-[5rem]">
+      <header class="h-[10svh] px-10 lg:pr-[5rem] xl:pr-[7rem] 2xl:pr-[13rem] flex items-center  lg:justify-end">
+        <nav class="flex w-full justify-between items-center lg:justify-end">
+            <div class="block lg:hidden">
                 <h1 class="text-center text-lg xl:text-4xl tracking-wide righteous-regular">ART</h1>
             </div>
-          <ul class="flex gap-x-8 lg:gap-x-12 xl:gap-x-16">
-            <li><button type="button" class="px-2 rounded-sm font-light text-base" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0">Home</button></li>
-            <li><button type="button" class="px-2 rounded-sm font-light text-base" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1">Product</button></li>
-            <li><button type="button" class="px-2 rounded-sm font-light text-base" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2">About</button></li>
-            <li><button type="button" class="px-2 rounded-sm font-light text-base" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3">Contact</button></li>
-            <li><button type="button" class="px-2 rounded-sm font-light text-base" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4">IDK</button></li>
-            </ul>
+            <div class="fixed md:relative right-[-5rem] md:right-0 top-0 h-full md:w-auto z-40" id="sidebar">
+                <ul class="flex flex-col  md:flex-row gap-y-7 pt-[5rem] pl-[2rem] md:pt-[0rem] md:pl-[0rem] md:gap-y-0 md:gap-x-8 lg:gap-x-12 xl:gap-x-16">
+                    <li><button type="button" class="px-2 rounded-sm font-light text-base nav" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0">Home</button></li>
+                    <li><button type="button" class="px-2 rounded-sm font-light text-base nav" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1">Product</button></li>
+                    <li><button type="button" class="px-2 rounded-sm font-light text-base nav" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2">About</button></li>
+                    <li><button type="button" class="px-2 rounded-sm font-light text-base nav" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3">Contact</button></li>
+                    <li><button type="button" class="px-2 rounded-sm font-light text-base nav" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4">IDK</button></li>
+                </ul>
+            </div>  
         </nav>
+        <div class="block md:hidden z-50">
+            <button onclick="toggle()" type="button">
+              <img src="img/burger.png" width="30" alt="" />
+            </button>
+        </div>
       </header>
 
-      
+      <!-- <aside class="fixed right-0 top-0 h-full z-40 w-zero block sm:hidden" id="sidebar">
+        <ul class="flex flex-col gap-y-10 p-5 pt-[5rem] block sm:hidden">
+            <li><button type="button" class="px-2 rounded-sm font-light text-base block sm:hidden" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0">Home</button></li>
+            <li><button type="button" class="px-2 rounded-sm font-light text-base block sm:hidden" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1">Product</button></li>
+            <li><button type="button" class="px-2 rounded-sm font-light text-base block sm:hidden" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2">About</button></li>
+            <li><button type="button" class="px-2 rounded-sm font-light text-base block sm:hidden" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3">Contact</button></li>
+            <li><button type="button" class="px-2 rounded-sm font-light text-base block sm:hidden" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4">IDK</button></li>
+        </ul>
+    </aside> -->
 
-    <div  class="h-[85svh] relative w-[90%] overflow-hidden ">
-        <!-- Carousel wrapper -->
-        <div class="relative h-[100svh] rounded-lg">
-            <!-- Item 1 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                <div  iv class="w-auto" id="home">
-                
-                    <div class="flex">
-                        <div class="w-[20%] pl-5">
-                            <h1 class="border-b border-neutral-500 text-xs lg:text-base">Work Collections</h1>
-                            <div class="mt-2 space-y-1">
-                                <button class="block panel active" onclick="showCollection('collection-1')">Collection 1</button>
-                                <button class="block panel" onclick="showCollection('collection-2')">Collection 2</button>
-                                <button class="block panel" onclick="showCollection('collection-3')">Collection 3</button>
+    
+        <div class="h-[85svh] relative w-[90%] overflow-hidden ">
+            <!-- Carousel wrapper -->
+            <div class="relative h-[100svh] rounded-lg">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                    <div  iv class="w-auto" id="home">
+                    
+                        <div class="flex">
+                            <div class="w-[20%] pl-5">
+                                <h1 class="border-b border-neutral-500 text-xs lg:text-base">Work Collections</h1>
+                                <div class="mt-2 space-y-1">
+                                    <button class="block panel active" onclick="showCollection('collection-1')">Collection 1</button>
+                                    <button class="block panel" onclick="showCollection('collection-2')">Collection 2</button>
+                                    <button class="block panel" onclick="showCollection('collection-3')">Collection 3</button>
+                                </div>
+                            </div>
+
+                            <!-- Collection wrapper -->
+                            <div class="w-full h-[70svh] relative">
+
+                                <div class="collections active h-full" id="collection-1">
+                                    <div class="w-3/4 flex items-center justify-center">
+                                        <img src="/img/statue-1.png" alt="" width="200">
+                                    </div>
+                                    <div class="w-1/2 pt-[7svh]">
+                                        <h1 class="righteous-regular text-2xl pb-[4svh]">DO WORK</h1>
+                                        <p class="font-extralight text-sm tracking-wide">
+                                            a three-dimensional representation usually of a person, animal,
+                                            or mythical being that is produced by sculpturing, modeling, or
+                                            casting.a three-dimensional representation of a person, animal, or
+                                            mythical being that is
+                                        </p>                       
+                                    </div>                               
+                                </div>                                       
+                                <div class="collections h-full" id="collection-2">
+                                    <div class="w-3/4 flex items-center justify-center">
+                                        <img src="/img/statue-1.png" alt="" width="300">
+                                    </div>
+                                    <div class="w-1/2 pt-[7svh]">
+                                        <h1 class="righteous-regular text-2xl pb-[4svh]">DO THINGS</h1>
+                                        <p class="font-extralight text-sm tracking-wide">
+                                            a three-dimensional representation usually of a person, animal,
+                                            or mythical being that is produced by sculpturing, modeling, or
+                                            casting.a three-dimensional representation of a person, animal, or
+                                            mythical being that is
+                                        </p>                       
+                                    </div>                               
+                                </div>                                       
+                                <div class="collections h-full" id="collection-3">
+                                    <div class="w-3/4 flex items-center justify-center">
+                                        <img src="/img/statue-1.png" alt="" width="400">
+                                    </div>
+                                    <div class="w-1/2 pt-[7svh]">
+                                        <h1 class="righteous-regular text-2xl pb-[4svh]">LET ME COOK</h1>
+                                        <p class="font-extralight text-sm tracking-wide">
+                                            a three-dimensional representation usually of a person, animal,
+                                            or mythical being that is produced by sculpturing, modeling, or
+                                            casting.a three-dimensional representation of a person, animal, or
+                                            mythical being that is
+                                        </p>                       
+                                    </div>                               
+                                </div>                                       
+                            </div>
+
+                        </div>
+                        <div class="secondary-bg-color h-[20svh] pl-[2rem] pt-[2svh] flex gap-x-[3rem] sm:gap-x-[5rem] lg:gap-x-[10rem] xl:gap-x-[20rem]  text-neutral-400">
+                            <span>
+                                <h1 class="font-bold">Events</h1>
+                                <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
+                                <h4 class="text-xs tracking-wide ">San Diego</h4>
+                                <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
+                            </span>
+                            <span class="pt-7">
+                                <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
+                                <h4 class="text-xs tracking-wide">San Diego</h4>
+                                <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
+                            </span>
+                            <span class="pt-7">      
+                                <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
+                                <h4 class="text-xs tracking-wide">San Diego</h4>
+                                <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <div class="w-auto" id="product">  
+                        <div class="flex">
+                            <div class="w-[20%] pl-5">
+                                <h1>Work Collections</h1>
+                            </div>
+                            <div class="w-full flex justify-center">
+                                <img src="/img/statue-1.png" alt="" width="450">
+                            </div>
+                            <div class="w-[45%] flex flex-col justify-center">
+                            <h1 class="righteous-regular text-2xl pb-[4svh]">Product</h1>
+                            <p class="font-extralight text-sm tracking-wide">
+                                a three-dimensional representation usually of a person, animal,
+                                or mythical being that is produced by sculpturing, modeling, or
+                                casting.a three-dimensional representation of a person, animal, or
+                                mythical being that is
+                            </p>
+                            <p class="font-extralight text-sm tracking-wide">
+                                a three-dimensional representation usually of a person, animal,
+                                or mythical being that is produced by sculpturing, modeling, or
+                                casting.a three-dimensional representation of a person, animal, or
+                                mythical being that is
+                            </p>
+                            
                             </div>
                         </div>
-
-                        <!-- Collection wrapper -->
-                        <div class="w-full h-[70svh] relative">
-
-                            <div class="collections active h-full" id="collection-1">
-                                <div class="w-3/4 flex items-center justify-center">
-                                    <img src="/img/statue-1.png" alt="" width="200">
-                                </div>
-                                <div class="w-1/2 pt-[7svh]">
-                                    <h1 class="righteous-regular text-2xl pb-[4svh]">DO WORK</h1>
-                                    <p class="font-extralight text-sm tracking-wide">
-                                        a three-dimensional representation usually of a person, animal,
-                                        or mythical being that is produced by sculpturing, modeling, or
-                                        casting.a three-dimensional representation of a person, animal, or
-                                        mythical being that is
-                                    </p>                       
-                                </div>                               
-                            </div>                                       
-                            <div class="collections h-full" id="collection-2">
-                                <div class="w-3/4 flex items-center justify-center">
-                                    <img src="/img/statue-1.png" alt="" width="300">
-                                </div>
-                                <div class="w-1/2 pt-[7svh]">
-                                    <h1 class="righteous-regular text-2xl pb-[4svh]">DO THINGS</h1>
-                                    <p class="font-extralight text-sm tracking-wide">
-                                        a three-dimensional representation usually of a person, animal,
-                                        or mythical being that is produced by sculpturing, modeling, or
-                                        casting.a three-dimensional representation of a person, animal, or
-                                        mythical being that is
-                                    </p>                       
-                                </div>                               
-                            </div>                                       
-                            <div class="collections h-full" id="collection-3">
-                                <div class="w-3/4 flex items-center justify-center">
-                                    <img src="/img/statue-1.png" alt="" width="400">
-                                </div>
-                                <div class="w-1/2 pt-[7svh]">
-                                    <h1 class="righteous-regular text-2xl pb-[4svh]">LET ME COOK</h1>
-                                    <p class="font-extralight text-sm tracking-wide">
-                                        a three-dimensional representation usually of a person, animal,
-                                        or mythical being that is produced by sculpturing, modeling, or
-                                        casting.a three-dimensional representation of a person, animal, or
-                                        mythical being that is
-                                    </p>                       
-                                </div>                               
-                            </div>                                       
+                        <div class="secondary-bg-color h-[20svh] pl-[2rem] pt-[2svh] flex gap-x-[20rem]  text-neutral-400">
+                            <span>
+                                <h1 class="font-bold">Events</h1>
+                                <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
+                                <h4 class="text-xs tracking-wide ">San Diego</h4>
+                                <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
+                            </span>
+                            <span class="pt-7">
+                                <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
+                                <h4 class="text-xs tracking-wide">San Diego</h4>
+                                <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
+                            </span>
+                            <span class="pt-7">      
+                                <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
+                                <h4 class="text-xs tracking-wide">San Diego</h4>
+                                <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
+                            </span>
                         </div>
-
                     </div>
-                    <div class="secondary-bg-color h-[20svh] pl-[2rem] pt-[2svh] flex gap-x-[3rem] sm:gap-x-[5rem] lg:gap-x-[10rem] xl:gap-x-[20rem]  text-neutral-400">
-                        <span>
-                            <h1 class="font-bold">Events</h1>
-                            <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
-                            <h4 class="text-xs tracking-wide ">San Diego</h4>
-                            <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
-                        </span>
-                        <span class="pt-7">
-                            <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
-                            <h4 class="text-xs tracking-wide">San Diego</h4>
-                            <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
-                        </span>
-                        <span class="pt-7">      
-                            <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
-                            <h4 class="text-xs tracking-wide">San Diego</h4>
-                            <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
-                        </span>
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <div class="w-auto" id="About">          
+                        <div class="flex">
+                            <div class="w-[20%] pl-5">
+                                <h1>Work Collections</h1>
+                            </div>
+                            <div class="w-full flex justify-center">
+                                <img src="/img/statue-1.png" alt="" width="450">
+                            </div>
+                            <div class="w-[45%] flex flex-col justify-center">
+                            <h1 class="righteous-regular text-2xl pb-[4svh]">About</h1>
+                            <p class="font-extralight text-sm tracking-wide">
+                                a three-dimensional representation usually of a person, animal,
+                                or mythical being that is produced by sculpturing, modeling, or
+                                casting.a three-dimensional representation of a person, animal, or
+                                mythical being that is
+                            </p>
+                            <p class="font-extralight text-sm tracking-wide">
+                                a three-dimensional representation usually of a person, animal,
+                                or mythical being that is produced by sculpturing, modeling, or
+                                casting.a three-dimensional representation of a person, animal, or
+                                mythical being that is
+                            </p>
+                            
+                            </div>
+                        </div>
+                        <div class="secondary-bg-color h-[20svh] pl-[2rem] pt-[2svh] flex gap-x-[20rem]  text-neutral-400">
+                            <span>
+                                <h1 class="font-bold">Events</h1>
+                                <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
+                                <h4 class="text-xs tracking-wide ">San Diego</h4>
+                                <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
+                            </span>
+                            <span class="pt-7">
+                                <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
+                                <h4 class="text-xs tracking-wide">San Diego</h4>
+                                <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
+                            </span>
+                            <span class="pt-7">      
+                                <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
+                                <h4 class="text-xs tracking-wide">San Diego</h4>
+                                <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <div class="w-auto" id="contact">
+                    
+                        <div class="flex">
+                            <div class="w-[20%] pl-5">
+                                <h1>Work Collections</h1>
+                            </div>
+                            <div class="w-full flex justify-center">
+                                <img src="/img/statue-1.png" alt="" width="450">
+                            </div>
+                            <div class="w-[45%] flex flex-col justify-center">
+                            <h1 class="righteous-regular text-2xl pb-[4svh]">Contact</h1>
+                            <p class="font-extralight text-sm tracking-wide">
+                                a three-dimensional representation usually of a person, animal,
+                                or mythical being that is produced by sculpturing, modeling, or
+                                casting.a three-dimensional representation of a person, animal, or
+                                mythical being that is
+                            </p>
+                            <p class="font-extralight text-sm tracking-wide">
+                                a three-dimensional representation usually of a person, animal,
+                                or mythical being that is produced by sculpturing, modeling, or
+                                casting.a three-dimensional representation of a person, animal, or
+                                mythical being that is
+                            </p>
+                            
+                            </div>
+                        </div>
+                        <div class="secondary-bg-color h-[20svh] pl-[2rem] pt-[2svh] flex gap-x-[20rem]  text-neutral-400">
+                            <span>
+                                <h1 class="font-bold">Events</h1>
+                                <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
+                                <h4 class="text-xs tracking-wide ">San Diego</h4>
+                                <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
+                            </span>
+                            <span class="pt-7">
+                                <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
+                                <h4 class="text-xs tracking-wide">San Diego</h4>
+                                <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
+                            </span>
+                            <span class="pt-7">      
+                                <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
+                                <h4 class="text-xs tracking-wide">San Diego</h4>
+                                <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <div class="w-auto" id="idk">
+                    
+                        <div class="flex">
+                            <div class="w-[20%] pl-5">
+                                <h1>Work Collections</h1>
+                            </div>
+                            <div class="w-full flex justify-center">
+                                <img src="/img/statue-1.png" alt="" width="450">
+                            </div>
+                            <div class="w-[45%] flex flex-col justify-center">
+                            <h1 class="righteous-regular text-2xl pb-[4svh]">IDK</h1>
+                            <p class="font-extralight text-sm tracking-wide">
+                                a three-dimensional representation usually of a person, animal,
+                                or mythical being that is produced by sculpturing, modeling, or
+                                casting.a three-dimensional representation of a person, animal, or
+                                mythical being that is
+                            </p>
+                            <p class="font-extralight text-sm tracking-wide">
+                                a three-dimensional representation usually of a person, animal,
+                                or mythical being that is produced by sculpturing, modeling, or
+                                casting.a three-dimensional representation of a person, animal, or
+                                mythical being that is
+                            </p>
+                            
+                            </div>
+                        </div>
+                        <div class="secondary-bg-color h-[20svh] pl-[2rem] pt-[2svh] flex gap-x-[20rem]  text-neutral-400">
+                            <span>
+                                <h1 class="font-bold">Events</h1>
+                                <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
+                                <h4 class="text-xs tracking-wide ">San Diego</h4>
+                                <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
+                            </span>
+                            <span class="pt-7">
+                                <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
+                                <h4 class="text-xs tracking-wide">San Diego</h4>
+                                <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
+                            </span>
+                            <span class="pt-7">      
+                                <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
+                                <h4 class="text-xs tracking-wide">San Diego</h4>
+                                <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Item 2 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <div class="w-auto" id="product">  
-                    <div class="flex">
-                        <div class="w-[20%] pl-5">
-                            <h1>Work Collections</h1>
-                        </div>
-                        <div class="w-full flex justify-center">
-                            <img src="/img/statue-1.png" alt="" width="450">
-                        </div>
-                        <div class="w-[45%] flex flex-col justify-center">
-                        <h1 class="righteous-regular text-2xl pb-[4svh]">Product</h1>
-                        <p class="font-extralight text-sm tracking-wide">
-                            a three-dimensional representation usually of a person, animal,
-                            or mythical being that is produced by sculpturing, modeling, or
-                            casting.a three-dimensional representation of a person, animal, or
-                            mythical being that is
-                        </p>
-                        <p class="font-extralight text-sm tracking-wide">
-                            a three-dimensional representation usually of a person, animal,
-                            or mythical being that is produced by sculpturing, modeling, or
-                            casting.a three-dimensional representation of a person, animal, or
-                            mythical being that is
-                        </p>
-                        
-                        </div>
-                    </div>
-                    <div class="secondary-bg-color h-[20svh] pl-[2rem] pt-[2svh] flex gap-x-[20rem]  text-neutral-400">
-                        <span>
-                            <h1 class="font-bold">Events</h1>
-                            <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
-                            <h4 class="text-xs tracking-wide ">San Diego</h4>
-                            <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
-                        </span>
-                        <span class="pt-7">
-                            <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
-                            <h4 class="text-xs tracking-wide">San Diego</h4>
-                            <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
-                        </span>
-                        <span class="pt-7">      
-                            <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
-                            <h4 class="text-xs tracking-wide">San Diego</h4>
-                            <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <!-- Item 3 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <div class="w-auto" id="About">          
-                    <div class="flex">
-                        <div class="w-[20%] pl-5">
-                            <h1>Work Collections</h1>
-                        </div>
-                        <div class="w-full flex justify-center">
-                            <img src="/img/statue-1.png" alt="" width="450">
-                        </div>
-                        <div class="w-[45%] flex flex-col justify-center">
-                        <h1 class="righteous-regular text-2xl pb-[4svh]">About</h1>
-                        <p class="font-extralight text-sm tracking-wide">
-                            a three-dimensional representation usually of a person, animal,
-                            or mythical being that is produced by sculpturing, modeling, or
-                            casting.a three-dimensional representation of a person, animal, or
-                            mythical being that is
-                        </p>
-                        <p class="font-extralight text-sm tracking-wide">
-                            a three-dimensional representation usually of a person, animal,
-                            or mythical being that is produced by sculpturing, modeling, or
-                            casting.a three-dimensional representation of a person, animal, or
-                            mythical being that is
-                        </p>
-                        
-                        </div>
-                    </div>
-                    <div class="secondary-bg-color h-[20svh] pl-[2rem] pt-[2svh] flex gap-x-[20rem]  text-neutral-400">
-                        <span>
-                            <h1 class="font-bold">Events</h1>
-                            <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
-                            <h4 class="text-xs tracking-wide ">San Diego</h4>
-                            <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
-                        </span>
-                        <span class="pt-7">
-                            <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
-                            <h4 class="text-xs tracking-wide">San Diego</h4>
-                            <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
-                        </span>
-                        <span class="pt-7">      
-                            <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
-                            <h4 class="text-xs tracking-wide">San Diego</h4>
-                            <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <!-- Item 4 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <div class="w-auto" id="contact">
-                
-                    <div class="flex">
-                        <div class="w-[20%] pl-5">
-                            <h1>Work Collections</h1>
-                        </div>
-                        <div class="w-full flex justify-center">
-                            <img src="/img/statue-1.png" alt="" width="450">
-                        </div>
-                        <div class="w-[45%] flex flex-col justify-center">
-                        <h1 class="righteous-regular text-2xl pb-[4svh]">Contact</h1>
-                        <p class="font-extralight text-sm tracking-wide">
-                            a three-dimensional representation usually of a person, animal,
-                            or mythical being that is produced by sculpturing, modeling, or
-                            casting.a three-dimensional representation of a person, animal, or
-                            mythical being that is
-                        </p>
-                        <p class="font-extralight text-sm tracking-wide">
-                            a three-dimensional representation usually of a person, animal,
-                            or mythical being that is produced by sculpturing, modeling, or
-                            casting.a three-dimensional representation of a person, animal, or
-                            mythical being that is
-                        </p>
-                        
-                        </div>
-                    </div>
-                    <div class="secondary-bg-color h-[20svh] pl-[2rem] pt-[2svh] flex gap-x-[20rem]  text-neutral-400">
-                        <span>
-                            <h1 class="font-bold">Events</h1>
-                            <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
-                            <h4 class="text-xs tracking-wide ">San Diego</h4>
-                            <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
-                        </span>
-                        <span class="pt-7">
-                            <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
-                            <h4 class="text-xs tracking-wide">San Diego</h4>
-                            <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
-                        </span>
-                        <span class="pt-7">      
-                            <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
-                            <h4 class="text-xs tracking-wide">San Diego</h4>
-                            <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <!-- Item 5 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <div class="w-auto" id="idk">
-                
-                    <div class="flex">
-                        <div class="w-[20%] pl-5">
-                            <h1>Work Collections</h1>
-                        </div>
-                        <div class="w-full flex justify-center">
-                            <img src="/img/statue-1.png" alt="" width="450">
-                        </div>
-                        <div class="w-[45%] flex flex-col justify-center">
-                        <h1 class="righteous-regular text-2xl pb-[4svh]">IDK</h1>
-                        <p class="font-extralight text-sm tracking-wide">
-                            a three-dimensional representation usually of a person, animal,
-                            or mythical being that is produced by sculpturing, modeling, or
-                            casting.a three-dimensional representation of a person, animal, or
-                            mythical being that is
-                        </p>
-                        <p class="font-extralight text-sm tracking-wide">
-                            a three-dimensional representation usually of a person, animal,
-                            or mythical being that is produced by sculpturing, modeling, or
-                            casting.a three-dimensional representation of a person, animal, or
-                            mythical being that is
-                        </p>
-                        
-                        </div>
-                    </div>
-                    <div class="secondary-bg-color h-[20svh] pl-[2rem] pt-[2svh] flex gap-x-[20rem]  text-neutral-400">
-                        <span>
-                            <h1 class="font-bold">Events</h1>
-                            <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
-                            <h4 class="text-xs tracking-wide ">San Diego</h4>
-                            <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
-                        </span>
-                        <span class="pt-7">
-                            <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
-                            <h4 class="text-xs tracking-wide">San Diego</h4>
-                            <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
-                        </span>
-                        <span class="pt-7">      
-                            <h3 class="text-xs tracking-wide text-neutral-500">3312 Wilson Street</h3>
-                            <h4 class="text-xs tracking-wide">San Diego</h4>
-                            <h5 class="text-xs font-extralight">UTC-8: Pacific Standard Time (PST)</h5>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>   
+        </div>   
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
