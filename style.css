@@ -32,10 +32,12 @@ html {
 .panel {
     font-size: .7rem;
     transition: all .2s ease-in;
+    color: #8b8b8b;
   
 }
 .panel.active {
     font-size: .8rem;
+    color: #bebebe;
 }
 
 .collection-wrapper {
